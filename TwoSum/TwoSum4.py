@@ -17,4 +17,3 @@ for i in nums_dict:
 			result = [x,i]
 
 print(result)
-print(result)  
