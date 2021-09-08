@@ -1,34 +1,28 @@
 import unittest
 
 def isValid(s):
-    # print(s.index("i"))
+    # can't have a matching bracket if it's an odd length, at least one wouldn't have a match
+    if (len(s)%2!=0 or len(s)==0): 
+        return False 
 
     dict_match = {"(":")",")":"(","{":"}","}":"{","[":"]","]":"["}
 
-    # for symb in s:
-    #     subtring = s
-    #     while (len(substring) != 0):
-    #         if ()
+    for symb in s:
+        s_list = list(s)
+        print(s_list)
+        while (len(s_list) >= 0):
+            if (len(s_list) < 2):
+                break
+            # if(s_list[s_list.index(symb)])
+            print(s_list.index(symb))
+            s_list=s_list[0:-1]
 
-        # print(symb)
 
-    # can't have a matching bracket if it's an odd length, at least one wouldn't have a match
-    # if (len(s)%2!=0 or len(s)==0): 
-    #     return False 
 
-    # # check if first half of string = second half of string reversed
-    # half = int(len(s) / 2)
-    # comp1 = s[0:half]
-    # # print (comp1)
-    # comp2 = s[half:]
-    # rev = comp2[::-1]
-    # rev = rev.replace(")","(")
-    # if (comp1 == rev):
-    #     return True
 
     # return False
 
-print(isValid("()[]"))
+print(isValid("([])()"))
 
 
 # #----------------------TEST CASES-----------------------------
@@ -50,6 +44,9 @@ print(isValid("()[]"))
 
 #     def test_6(self):
 #         self.assertEqual(isValid("(][{}]"),False)
+
+#     def test_7(self):
+#         self.assertEqual(isValid("([])()"),True)
 
 # if __name__ == '__main__':
 #     unittest.main(verbosity=2)
