@@ -12,12 +12,12 @@ def reverse(x):
 
     strings = [str(integer) for integer in l1] #makes list of string integers
     a_string = "".join(strings) #combines list of integers (type string) into one string
-    x2 = int(a_string) #converts string to int
-
+    x2 = int(a_string) 
     if (x2 > pow(2,31)-1 or x2 < pow(-2,31) or x2 == 0): #check if 32 bit integer
         return 0
 
-    if (neg==True):
+    if (neg==True):#converts string to int
+
         return x2*-1
 
     else:
